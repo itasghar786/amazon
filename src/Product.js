@@ -13,11 +13,14 @@ function Product({ title, image, price, rating }) {
                     <strong>{price}</strong>
                 </p>
                 <div className="product__rating">
-                    <p>star</p>
+                    {Array(rating).fill().map((_, i) => (
+                        <p>*</p>
+                    ))}
+
                 </div>
             </div>
 
-            <img src="https://images-na.ssl-images-amazon.com/images/I/81-QB7nDh4L.jpg"
+            <img src={image}
                 alt=""
             />
 
